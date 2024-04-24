@@ -1,4 +1,130 @@
+.main {
+  max-width: 1024px;
+  margin: auto;
+}
+
 .container {
   color: #fff;
+}
 
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentForm {
+  width: 100%;
+  padding: 0 18px;
+  padding-bottom: 28px;
+  margin-top: 58px;
+}
+
+.title {
+  margin-bottom: 8px;
+}
+
+.checkBoxText {
+  margin-left: 8px;
+}
+
+.checkBoxArea {
+  margin: 14px 0;
+}
+
+.checkBox {
+  height: 18px;
+  width: 18px;
+}
+
+.button {
+  margin-top: 24px;
+  border: 0;
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #3183ff;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.taskContainer {
+  background-color: #fff;
+  color: #000000;
+  padding: 0 18px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.taskContainer a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.taskContainer h1 {
+  text-align: center;
+  font-size: 32px;
+  margin: 14px 0;
+}
+
+.task {
+  width: 100%;
+  padding-bottom: 28px;
+  margin-bottom: 14px;
+  line-height: 150%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1.5px solid #909090;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.tagContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.tag {
+  background-color: #3183ff;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.shareButton {
+  background-color: transparent;
+  border: 0;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.taskContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.taskContent p {
+  white-space: pre-wrap;
+}
+
+.trashButton {
+  background-color: transparent;
+  border: 0;
+  margin: 0 8px;
+  cursor: pointer;
 }
