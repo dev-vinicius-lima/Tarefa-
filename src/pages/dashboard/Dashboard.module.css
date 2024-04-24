@@ -24,6 +24,7 @@
 
 .title {
   margin-bottom: 8px;
+  color: #fff;
 }
 
 .checkBoxText {
@@ -52,7 +53,6 @@
 }
 
 .taskContainer {
-  background-color: #fff;
   color: #000000;
   padding: 0 18px;
   border-radius: 8px;
@@ -85,6 +85,7 @@
   border: 1.5px solid #909090;
   border-radius: 8px;
   padding: 14px;
+  background-color: #fff;
 }
 
 .tagContainer {
