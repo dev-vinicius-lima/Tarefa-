@@ -37,7 +37,6 @@ export default function Home({ posts, comments }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // 
   const commentRef = collection(db, "comments")
   const postRef = collection(db, "tarefas")
 

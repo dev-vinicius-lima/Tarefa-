@@ -181,5 +181,5 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       item: task,
       allcomments: allcomments,
     },
-  };
+  }
 };
