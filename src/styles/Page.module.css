@@ -1,7 +1,7 @@
 .container {
   background-color: #0f0f0f;
   width: 100%;
-  height: calc(100vh - 95px);
+  height: calc(100vh - 76px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,11 +51,11 @@
 
 @media screen and (max-width: 580px) {
   .hero {
-    max-width: 85%;
+    max-width: 75%;
   }
 
   .title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .infoContent {
@@ -65,7 +65,7 @@
   }
 
   .box {
-    width: 80%;
+    width: 70%;
     margin-bottom: 1rem;
     text-align: center;
   }

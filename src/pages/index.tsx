@@ -33,7 +33,7 @@ export default function Home({ posts, comments }: HomeProps) {
         </section>
       </div>
     </div>
-  );
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {

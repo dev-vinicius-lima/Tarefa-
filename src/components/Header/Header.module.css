@@ -65,3 +65,21 @@
 .link:hover {
   transform: scale(1.08);
 }
+
+@media screen and (max-width: 580px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .link {
+    width: 90px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .loginButton {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
