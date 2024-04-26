@@ -59,3 +59,39 @@
   background-color: #909090;
   cursor: not-allowed;
 }
+
+.comment {
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  background-color: #fff;
+  color: #000;
+
+}
+
+.headComment {
+  display: flex;
+  align-items: center;
+}
+
+.commentsLabel {
+  background-color: #ccc;
+  padding: 4px 8px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+
+.buttonTrash {
+  background-color: transparent;
+  color: red;
+  border: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment p {
+  margin-top: 14px;
+  white-space: pre-wrap;
+}

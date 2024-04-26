@@ -12,8 +12,10 @@ import {
   getDoc,
   addDoc,
   getDocs,
+  deleteDoc
 } from "firebase/firestore";
 import Textarea from "@/components/Textarea";
+import { FaTrash } from 'react-icons/fa';
 type TaskItemProps = {
   item: {
     tarefa: string;
@@ -37,6 +39,7 @@ export default function Task({ item, allcomments }: TaskItemProps) {
   const [input, setInput] = useState("");
   const [comments, setComments] = useState<CommentProps[]>(allcomments || []);
 
+
   async function handleComment(e: FormEvent) {
     e.preventDefault();
     if (input === "") return;
@@ -50,12 +53,34 @@ export default function Task({ item, allcomments }: TaskItemProps) {
         name: session?.user?.name,
         taskId: item?.taskId,
       });
+      const data = {
+        id: docRef.id,
+        comment: input,
+        user: session?.user?.email,
+        name: session?.user?.name,
+        taskId: item?.taskId,
+      }
+
+      setComments((oldItem) => [...oldItem, data])
       setInput("");
     } catch (error) {
       console.log(error);
     }
   }
 
+  // deletar comentarios
+  async function handleDeleteComment(id: string) {
+    try {
+      const docRef = doc(db, "comments", id)
+      await deleteDoc(docRef)
+
+      const deleteComment = comments.filter((comment) => comment.id !== id)
+      setComments(deleteComment)
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -88,6 +113,13 @@ export default function Task({ item, allcomments }: TaskItemProps) {
         {comments.length === 0 && <span>Nenhum comentario encontrado...</span>}
         {comments.map((item) => (
           <article className={styles.comment} key={item.id}>
+            <div className={styles.headComment}>
+              <label className={styles.commentsLabel}>{item.name}</label>
+              {item.user === session?.user?.email && (
+                <button className={styles.buttonTrash}
+                  onClick={() => handleDeleteComment(item.id)}><FaTrash size={18} color='#ea3140' /></button>
+              )}
+            </div>
             <p>{item.comment}</p>
           </article>
         ))}
